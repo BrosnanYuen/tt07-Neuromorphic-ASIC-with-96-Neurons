@@ -51,7 +51,8 @@ module tt_um_multi_neurons_brosnanyuen #(parameter NEURONS = 96, INPUTS=8, OUTPU
         end
     endgenerate
 
-     always @* begin
+     always@(posedge clk) 
+     begin
         RESET_VEC[ui_in[7:1]] <= rst_n;
      end
      
