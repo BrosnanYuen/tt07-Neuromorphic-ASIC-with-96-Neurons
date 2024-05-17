@@ -2,8 +2,8 @@
 project:
   title:        "128 Neuromorphic ASIC RayBNN"      # Project title
   author:       "Brosnan Yuen"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  discord:      "brosnanyuen"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Neuromorphic ASIC with 128 spiking neurons each with 8 bit memory"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
