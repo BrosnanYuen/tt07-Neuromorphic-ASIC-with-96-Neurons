@@ -57,6 +57,7 @@ module tt_um_multi_neurons_brosnanyuen #(parameter NEURONS = 24, INPUTS=8, OUTPU
      
     
 
-
+	assign uio_out = 0;
+	assign uio_oe  = 0;
 
 endmodule
