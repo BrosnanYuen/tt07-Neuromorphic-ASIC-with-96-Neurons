@@ -26,14 +26,52 @@ Neuronmorphic ASIC with 96 neurons arranged in an 8 neuron by 12 layer grid.
 | ui[6]/ui_in[6] | Serial Input | Directly connected to input neuron 6 |
 | ui[7]/ui_in[7] | Serial Input | Directly connected to input neuron 7 |
 
+* ui[0]/ui_in[0] to ui[7]/ui_in[7] are directly connected to neuron 0 to neuron 7
+* Each individual input pin store 8 bits of serial data
+* Clocked on rising edge CLK
+
+
+| Pin Name        | Type          | Connection                      |
+|-----------------|---------------|---------------------------------|
+| uo[0]/uo_out[0] | Serial Output | Directly connected to neuron 88 |
+| uo[1]/uo_out[1] | Serial Output | Directly connected to neuron 89 |
+| uo[2]/uo_out[2] | Serial Output | Directly connected to neuron 90 |
+| uo[3]/uo_out[3] | Serial Output | Directly connected to neuron 91 |
+| uo[4]/uo_out[4] | Serial Output | Directly connected to neuron 92 |
+| uo[5]/uo_out[5] | Serial Output | Directly connected to neuron 93 |
+| uo[6]/uo_out[6] | Serial Output | Directly connected to neuron 94 |
+| uo[7]/uo_out[7] | Serial Output | Directly connected to neuron 95 |
+
+* uo[0]/uo_out[0] to uo[7]/uo_out[7] are directly connected to neuron 88 to neuron 95
+* Each individual output pin produces 8 bits of serial data
+* Clocked on rising edge CLK
+
+
+| Pin Name         | Type               | Description                                                     |
+|------------------|--------------------|-----------------------------------------------------------------|
+| CLK              | Input Clock        | Rising Edge Clock                                               |
+| RST_N            | Input Reset        | Set High to program a selected neuron. Low does nothing.        |
+| uio[0]/uio_in[0] | Input Program Data | Data for 1-wire serial protocol for programming selected neuron |
+| uio[1]/uio_in[1] | Input Address      | Address[0] used to select a single neuron for programming       |
+| uio[2]/uio_in[2] | Input Address      | Address[1] used to select a single neuron for programming       |
+| uio[3]/uio_in[3] | Input Address      | Address[2] used to select a single neuron for programming       |
+| uio[4]/uio_in[4] | Input Address      | Address[3] used to select a single neuron for programming       |
+| uio[5]/uio_in[5] | Input Address      | Address[4] used to select a single neuron for programming       |
+| uio[6]/uio_in[6] | Input Address      | Address[5] used to select a single neuron for programming       |
+| uio[7]/uio_in[7] | Input Address      | Address[6] used to select a single neuron for programming       |
+
+* uio[1]/uio_in[1] to uio[7]/uio_in[7] are used to select a single neuron from the 96 neuron array
+* If RST_N is low, then nothing happens. If RST_N is high, then the selected individual neuron enters a programming stage.
+* 16 bit serial input to uio[0]/uio_in[0] writes information to the internal registers of the selected neuron
+* Clocked on rising edge CLK
+
 
 
 ![](singleneuron.png)
 
-
-
-
-
+* Each neuron has multiple inputs written to an 8 bit input shift register
+* If the input shift register matches the 8 bit internal target register then the neuron fires
+* Upon firing, the 8 bit output shift register output a predetermined sequence to the next neuron or output of the network
 
 
 
