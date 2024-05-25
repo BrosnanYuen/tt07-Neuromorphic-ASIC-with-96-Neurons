@@ -1,4 +1,40 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) 
+
+
+
+
+<img src="./giphy.gif" width="1000">
+
+![](./overview.png)
+
+Neuronmorphic ASIC with 96 neurons arranged in an 8 neuron by 12 layer grid.
+* All 96 Neurons are fully programmable
+* There are 8 serial inputs to the neural network directly connected to uio_in[0], uio_in[1], ..., uio_in[7]
+* There are 8 serial outputs of the neural network directly connected to uo_out[0], uo_out[1], ..., uo_out[7]
+* The Neural network is controlled by ui_in[0], ui_in[1], ..., ui_in[7]
+* Over 300 Neural connections in the neural network
+* 18470 total cells with 59.09% utilization in TinyTapeout 7 
+
+| Pin Name       | Type         | Connection                           |
+|----------------|--------------|--------------------------------------|
+| ui[0]/ui_in[0] | Serial Input | Directly connected to input neuron 0 |
+| ui[1]/ui_in[1] | Serial Input | Directly connected to input neuron 1 |
+| ui[2]/ui_in[2] | Serial Input | Directly connected to input neuron 2 |
+| ui[3]/ui_in[3] | Serial Input | Directly connected to input neuron 3 |
+| ui[4]/ui_in[4] | Serial Input | Directly connected to input neuron 4 |
+| ui[5]/ui_in[5] | Serial Input | Directly connected to input neuron 5 |
+| ui[6]/ui_in[6] | Serial Input | Directly connected to input neuron 6 |
+| ui[7]/ui_in[7] | Serial Input | Directly connected to input neuron 7 |
+
+
+
+![](singleneuron.png)
+
+
+
+
+
+
 
 
 ![](./giphy.gif)
