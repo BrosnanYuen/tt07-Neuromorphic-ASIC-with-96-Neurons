@@ -82,8 +82,8 @@ Neuronmorphic ASIC with 96 neurons arranged in an 8 neuron by 12 layer grid.
 
 ## How to test
 
-Explain how to use your project
+Program the neurons and input random sequence to the neural network
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
